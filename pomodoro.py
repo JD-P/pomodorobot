@@ -13,12 +13,14 @@ class Pomodoro():
         pass
 
     def cmd_view_table(self, event):
-        """Send a register table to the user or channel specified by target."""
+        """Send a register table to the user which has requested one."""
         formatted_table = self.register.format_table()
         send_events = []
         for line in formatted_table:
             send_events.append(("send", event.source, line))
         return send_events 
+
+    def cmd_
 
     def add_pomodoro(self, split):
         """Add a pomodoro to the stack.
